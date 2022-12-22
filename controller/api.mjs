@@ -17,6 +17,6 @@ export const consultarPokemon = async (req, res) => {
 }
 
 export const pokedexPage = (req, res) => {
-    return res.sendFile(path.resolve(__dirname + '/pokedex.html'));
+    return res.sendFile(path.resolve(__dirname + '/index.html'));
 
 }

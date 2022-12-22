@@ -81,7 +81,6 @@ const preencherPokedex = (pokemon) => {
         }
     }
 
-    console.log(pokemon.types)
 
     baseStat.textContent = '';
     effortStat.textContent = '';
