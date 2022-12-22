@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Pokedex</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="pokedex">
+            <div class="pokedexHeader"></label>
+                <input type="number" name="pokemonID" class="pokemonID" value="1" max="649">
+                <button class='search' for="search">Search</button>
+                <button class="random" for="random">Random</button>
+            </div>
+            <div class="pokemonInfo invisible">
+                <div class="pokemonArt">
+                    <img src="" alt="pokemon">
+                </div>
+                <div class="pokemonDetails">
+                    <div class="idName">
+                        <label for="ID" class="idDetail"></label>
+                        <h1 class="nameDetail"></h1>
+                    </div>
+                    <div class="icons">
+                        <div class="pokemonIcon">
+                            <img src="" alt="pokemonIcon">
+                        </div>
+                        <div class="typeHeightWeight">
+                            <div class="types">
+                                <img src="" alt="type1" class="type1">
+                                <img src="" alt="type2" class="type2">
+                            </div>
+                            <div class="heightWeight">
+                                <span class="height"></span>
+                                <span class="weight"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pokemonText invisible">
+                <div class="abilities">
+                    <div>
+                        <h2>Abilities: </h2><span></span>
+                    </div>
+                </div>
+                <div class="effortStats">
+                    <div>
+                        <h2>Base Stat: </h2><span class="base"></span>
+                    </div>
+                    <div>
+                        <h2>Effort: </h2><span class="effort"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="async module" src="index.mjs"></script>
+    <script defer src="./controller/script.js"></script>
+
+
+</body>
+
+</html>
