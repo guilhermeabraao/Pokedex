@@ -35,7 +35,7 @@ searchBtn.addEventListener('click', async (event) => {
 
     try {
         const pokemon = await buscarPokemon(pokemonID.value);
-        preencherPokedex(JSON.parse(pokemon));
+        preencherPokedex(pokemon.data);
     } catch (erro) {
         console.log(erro);
     }
@@ -49,7 +49,7 @@ randomBtn.addEventListener('click', async (event) => {
         const random = Math.floor(Math.random() * (650 - 1) + 1);
         pokemonID.value = random;
         const pokemon = await buscarPokemon(random);
-        preencherPokedex(JSON.parse(pokemon));
+        preencherPokedex(pokemon.data);
     } catch (erro) {
         console.log(erro);
     }
@@ -81,7 +81,6 @@ const preencherPokedex = (pokemon) => {
         }
     }
 
-
     baseStat.textContent = '';
     effortStat.textContent = '';
     pokemon.stats.forEach(stat => {
@@ -91,8 +90,6 @@ const preencherPokedex = (pokemon) => {
         }
     });
 
-
-
     pokemonInfo.classList.remove('invisible');
     pokemonText.classList.remove('invisible');
     return;
@@ -101,16 +98,6 @@ const preencherPokedex = (pokemon) => {
 
 
 const buscarPokemon = async (id) => {
-    const result = await fetch(`/pokedex${id}`, {
-        method: 'GET',
-        headers: {
-            'Accept': 'application/json',
-        },
-    }).then((response) => response.json())
-        .then((responseData) => {
-            return responseData;
-        })
-        .catch(error => console.log(error));
-
-    return result;
+    const pokemon = await api.get(`pokemon/${id}`)
+    return pokemon;
 }

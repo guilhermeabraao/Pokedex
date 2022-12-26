@@ -6,8 +6,8 @@
 
 @font-face {
     font-family: 'pokedex';
-    src: url('./assets/font/pokemon_gb-webfont.woff2') format('woff2'),
-        url('./assets/font/pokemon_gb-webfont.woff') format('woff');
+    src: url('../assets/font/pokemon_gb-webfont.woff2') format('woff2'),
+        url('../assets/font/pokemon_gb-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -25,7 +25,7 @@
 }
 
 .pokedex {
-    background-image: url("./assets/pokedexTemplate.jpg");
+    background-image: url("../assets/pokedexTemplate.jpg");
     width: 1024px;
     height: 652px;
     font-family: 'pokedex', sans-serif;
